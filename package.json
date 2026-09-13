@@ -1,45 +1,45 @@
 {
-  "name": "app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "tsx watch ./src/server.ts",
-    "lint": "biome check --write --unsafe",
-    "lint:check": "biome check",
-    "format": "biome format --write",
-    "format:check": "biome format .",
-    "prepare": "husky",
-    "test": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/itsduzao/medclinic-api.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/itsduzao/medclinic-api/issues"
-  },
-  "homepage": "https://github.com/itsduzao/medclinic-api#readme",
-  "devDependencies": {
-    "@biomejs/biome": "^2.5.13",
-    "@types/express": "^5.0.6",
-    "@types/node": "^26.5.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.5.1",
-    "tsx": "^4.23.13",
-    "typescript": "^7.0.2"
-  },
-  "dependencies": {
-    "class-transformer": "^0.5.1",
-    "class-validator": "^0.15.1",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "pg": "^8.23.0",
-    "reflect-metadata": "^0.2.2",
-    "typeorm": "^1.1.1"
-  }
+	"name": "app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tsx watch ./src/server.ts",
+		"lint": "biome check --write --unsafe",
+		"lint:check": "biome check",
+		"format": "biome format --write",
+		"format:check": "biome format .",
+		"prepare": "husky",
+		"test": ""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itsduzao/medclinic-api.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/itsduzao/medclinic-api/issues"
+	},
+	"homepage": "https://github.com/itsduzao/medclinic-api#readme",
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.13",
+		"@types/express": "^5.0.6",
+		"@types/node": "^26.5.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.5.1",
+		"tsx": "^4.23.13",
+		"typescript": "^7.0.2"
+	},
+	"dependencies": {
+		"class-transformer": "^0.5.1",
+		"class-validator": "^0.15.1",
+		"dotenv": "^17.4.2",
+		"express": "^5.2.1",
+		"pg": "^8.23.0",
+		"reflect-metadata": "^0.2.2",
+		"typeorm": "^1.1.1"
+	}
 }

@@ -7,7 +7,9 @@
     "lint": "biome check --write --unsafe",
     "lint:check": "biome check",
     "format": "biome format --write",
-    "format:check": "biome format ."
+    "format:check": "biome format .",
+    "prepare": "husky",
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,8 @@
     "@biomejs/biome": "^2.5.13",
     "@types/express": "^5.0.6",
     "@types/node": "^26.5.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.5.1",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2"
   },

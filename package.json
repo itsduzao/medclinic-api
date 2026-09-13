@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "tsx ./src/server.ts --watch",
     "lint": "biome check --write --unsafe",
     "lint:check": "biome check",
     "format": "biome format --write",

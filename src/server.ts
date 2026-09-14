@@ -1,5 +1,7 @@
 import express from "express";
 import pgDataSource from "./database/pg-data-source";
+import { errorHandler } from "./middlewares/errorHandler";
+import { router } from "./routes";
 
 const PORT = 3000;
 const app = express();
@@ -22,3 +24,6 @@ async function startServer() {
 }
 
 startServer();
+
+app.use("/api/v1", router);
+app.use(errorHandler);

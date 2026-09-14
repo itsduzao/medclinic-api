@@ -1,5 +1,6 @@
 import type { Response } from "express";
 import type { CreateUserDto } from "../dtos/CreateUserDto";
+import type { LoginDto } from "../dtos/LoginDto";
 import { AuthService } from "../services/AuthService";
 import type { TypedBodyRequest } from "../types/express";
 
@@ -11,11 +12,6 @@ export class AuthController {
 		res: Response,
 	): Promise<Response> {
 		const { email, name, password, role } = req.body;
-
-		if (!email || !name || !password || !role)
-			return res.status(400).json({
-				error: "You must fill all required fields",
-			});
 
 		const user = await authService.createUser({
 			email,
@@ -30,5 +26,13 @@ export class AuthController {
 			email: user.email,
 			role: user.role,
 		});
+	}
+
+	async login(
+		req: TypedBodyRequest<LoginDto>,
+		res: Response,
+	): Promise<Response> {
+		const result = await authService.login(req.body);
+		return res.status(200).json(result);
 	}
 }

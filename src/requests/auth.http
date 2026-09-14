@@ -1,0 +1,42 @@
+### ===============================================================
+### ENVIRONMENT VARIABLES
+### ===============================================================
+@baseUrl = http://localhost:3000
+@route = api/v1/auth
+@contentType = application/json
+
+### ===============================================================
+###      ROUTE POST - Create new user
+### ===============================================================
+POST {{baseUrl}}/{{route}}/register
+Content-Type: {{contentType}}
+
+  {
+    "name": "Ronaldo Nazário",
+    "email": "fenomeno@r9.com",
+    "password": "brilhamuitonocorinthians",
+    "role": "ADMIN"
+  }
+
+### ===============================================================
+###      ROUTE POST - Create new user with missing values
+### ===============================================================
+POST {{baseUrl}}/{{route}}/register
+Content-Type: {{contentType}}
+
+  {
+    "name": "",
+    "password": "",
+    "email": ""
+  }
+
+### ===============================================================
+###       ROUTE POST - Login test
+### ===============================================================
+POST {{baseUrl}}/{{route}}/login
+Content-Type: {{contentType}}
+
+  {
+    "email": "fenomeno@r9.com",
+    "password": "brilhamuitonocorinthians"
+  }

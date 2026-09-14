@@ -30,7 +30,7 @@ export class UserController {
 		const { name, role } = await userService.getUser(user);
 
 		return res.status(200).json({
-			message: `Welcome, ${name}. You reached a route allowd to ${role}.`,
+			message: `Welcome, ${name}. You reached a route allowed to ${role}.`,
 		});
 	}
 }

@@ -16,4 +16,21 @@ export class UserController {
 
 		return res.status(200).json(result);
 	}
+
+	async welcomeAuthorizedPerson(
+		req: Request,
+		res: Response,
+	): Promise<Response> {
+		const { user } = req;
+
+		if (!user) {
+			throw new AppError("Unauthorized", 401);
+		}
+
+		const { name, role } = await userService.getUser(user);
+
+		return res.status(200).json({
+			message: `Welcome, ${name}. You reached a route allowd to ${role}.`,
+		});
+	}
 }

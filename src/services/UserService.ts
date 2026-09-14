@@ -19,6 +19,11 @@ export class UserService {
 			throw new AppError("User does not exist", 404);
 		}
 
-		return { id: user.id, name: user.name, email: user.email, role: user.role };
+		return {
+			id: user.id,
+			name: user.name,
+			email: user.email,
+			role: user.role,
+		};
 	}
 }

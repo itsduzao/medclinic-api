@@ -15,7 +15,7 @@
 	},
 	"customizations": {
 		"vscode": {
-			"extensions": ["Postman.postman-for-vscode"]
+			"extensions": ["Postman.postman-for-vscode", "biomejs.biome"]
 		}
 	}
 	// Features to add to the dev container. More info: https://containers.dev/features.

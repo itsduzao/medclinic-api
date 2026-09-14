@@ -12,3 +12,11 @@ export type TypedBodyRequest<
 	TBody,
 	TParams extends RouteParams = RouteParams,
 > = Request<TParams, unknown, TBody>;
+
+declare global {
+	namespace Express {
+		interface Request {
+			user?: AuthUser;
+		}
+	}
+}
